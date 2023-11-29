@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 ###########################################
 #  Deploy generated static website files
 ###########################################
@@ -9,13 +9,6 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 # Set variables
 PARENT_PATH="$SCRIPT_DIR/.."
 GITHUB_PAGE_REPO_LOCAL_PATH="$PARENT_PATH/../the-coin-guy.github.io"
-
-# Generate static website files
-pushd "$PARENT_PATH"
-    nvm use
-    yarn install
-    yarn build
-popd
 
 # Copy generated static files to server repo
 cp -r dist/website/browser/* "$GITHUB_PAGE_REPO_LOCAL_PATH"

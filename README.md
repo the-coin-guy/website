@@ -7,7 +7,7 @@
 
 ## Installation
 - Install `nvm`
-- Install `npm` from running `nvm (cat .nvmrc)`
+- Install `npm` from running `nvm use`
 - Install `yarn` from running `npm install -g yarn`
 - Install node dependencies from running `yarn install`
 
