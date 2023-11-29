@@ -1,6 +1,10 @@
 # The Coin Guy website
 
 
+## Pre-requisites
+- Locally git clone [the-coin-guy.github.io](https://github.com/the-coin-guy/the-coin-guy.github.io) git repository in same directory as this git repository
+
+
 ## Installation
 - Install `nvm`
 - Install `npm` from running `nvm (cat .nvmrc)`
@@ -25,9 +29,5 @@
 
 - Copy the contents of the generated `dist/` into the root of the local [the-coin-guy.github.io](https://github.com/the-coin-guy/the-coin-guy.github.io) git repository
     ```bash
-    GITHUB_PAGE_REPO_LOCAL_PATH="../the-coin-guy.github.io"
-    cp -r dist/* $GITHUB_PAGE_REPO_LOCAL_PATH
-    cd $GITHUB_PAGE_REPO_LOCAL_PATH
-    git commit -m ":rocket: Update website"
-    git push
+    ./bin/deploy.sh
     ```
