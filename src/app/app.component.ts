@@ -15,5 +15,5 @@ import { PhotoGridComponent } from "./photo-grid/photo-grid.component";
 })
 
 export class AppComponent {
-  title = 'The Coin Guy';
+  title: string = 'The Coin Guy';
 }
