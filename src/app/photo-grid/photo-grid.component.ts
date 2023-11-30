@@ -48,7 +48,7 @@ export class PhotoGridComponent {
 
   openDialog(photoId: string): void {
         const dialogRef = this.dialog.open(PhotoModalComponent, {
-            width: "250px",
+            // width:  "250px",
             data: getPhotoFromId(photoId, this.photos)
         });
 

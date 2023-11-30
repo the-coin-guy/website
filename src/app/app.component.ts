@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { RouterOutlet } from "@angular/router";
 import { FooterComponent } from "./footer/footer.component";
 import { NavbarComponent } from "./navbar/navbar.component";
@@ -12,7 +11,6 @@ import { PhotoGridComponent } from "./photo-grid/photo-grid.component";
     imports: [
         CommonModule,
         FooterComponent,
-        MatSlideToggleModule,
         NavbarComponent,
         PhotoGridComponent,
         RouterOutlet
@@ -22,5 +20,5 @@ import { PhotoGridComponent } from "./photo-grid/photo-grid.component";
 })
 
 export class AppComponent {
-    title: string = "The Coin Guy";
+    appName: string = "The Coin Guy";
 }
