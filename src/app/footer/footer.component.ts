@@ -8,4 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.css'
 })
 
-export class FooterComponent {}
+export class FooterComponent {
+  currentYear = new Date().getUTCFullYear();
+}
