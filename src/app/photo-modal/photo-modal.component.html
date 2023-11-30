@@ -1,0 +1,11 @@
+<div>
+  <h1 mat-dialog-title>Title: {{data.title}}</h1>
+  <div mat-dialog-content>
+    <p>Description: {{data.description}}</p>
+    <p>Image URL: {{data.image}}</p>
+    <img src="{{data.image}}"/>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Close</button>
+  </div>
+</div>
