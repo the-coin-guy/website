@@ -10,32 +10,34 @@ import {
 } from "@angular/material/dialog";
 
 export interface PhotoModalData {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
+    id: string;
+    title: string;
+    description: string;
+    image: string;
 }
 
 @Component({
-  selector: 'app-photo-modal',
-  standalone: true,
-  imports: [
-    MatDialogTitle,
-    MatDialogContent,
-    MatButtonModule,
-    MatDialogActions,
-    MatDialogClose
-  ],
-  templateUrl: './photo-modal.component.html',
-  styleUrl: './photo-modal.component.css'
+    selector: "app-photo-modal",
+    standalone: true,
+    imports: [
+        MatDialogTitle,
+        MatDialogContent,
+        MatButtonModule,
+        MatDialogActions,
+        MatDialogClose
+    ],
+    templateUrl: "./photo-modal.component.html",
+    styleUrl: "./photo-modal.component.css"
 })
 
 export class PhotoModalComponent {
-  constructor(
-    public dialogRef: MatDialogRef<PhotoModalComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: PhotoModalData) {}
+    constructor(
+        public dialogRef: MatDialogRef<PhotoModalComponent>,
+        @Inject(MAT_DIALOG_DATA) public data: PhotoModalData) {
 
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
+    }
+
+    onNoClick(): void {
+        this.dialogRef.close();
+    }
 }

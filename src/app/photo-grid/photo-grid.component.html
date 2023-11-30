@@ -1,13 +1,13 @@
 <mat-grid-list
-  cols="2"
-  rowHeight="2:1"
+    cols="2"
+    rowHeight="2:1"
 >
-  <div *ngFor="let photo of photos">
-    <mat-grid-tile
-      id="photo_{{photo.id}}"
-      (click)="openDialog(photo.id)"
-    >
-      {{photo.id}}
-    </mat-grid-tile>
-  </div>
+    <div *ngFor="let photo of photos">
+        <mat-grid-tile
+            id="photo_{{photo.id}}"
+            (click)="openDialog(photo.id)"
+        >
+            {{photo.id}}
+        </mat-grid-tile>
+    </div>
 </mat-grid-list>
