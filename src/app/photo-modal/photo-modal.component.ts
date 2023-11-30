@@ -27,7 +27,7 @@ export interface PhotoModalData {
         MatDialogClose
     ],
     templateUrl: "./photo-modal.component.html",
-    styleUrl: "./photo-modal.component.css"
+    styleUrl: "./photo-modal.component.sass"
 })
 
 export class PhotoModalComponent {

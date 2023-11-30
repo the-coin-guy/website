@@ -16,7 +16,7 @@ import { PhotoGridComponent } from "./photo-grid/photo-grid.component";
         RouterOutlet
     ],
     templateUrl: "./app.component.html",
-    styleUrl: "./app.component.css"
+    styleUrl: "./app.component.sass"
 })
 
 export class AppComponent {
