@@ -11,3 +11,7 @@ footer {
     margin: 0 auto;
     text-align: center;
 }
+
+.my-primary {
+background-color: var(--mat-autocomplete-background-color)
+}

@@ -165,3 +165,7 @@
 /*    margin-block: 1.5rem;*/
 /*  }*/
 /*}*/
+
+.container {
+    padding: 20px 50px;
+}
