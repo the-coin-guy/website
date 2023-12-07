@@ -1,0 +1,11 @@
+.angular/
+bin/
+dist/
+node_modules/
+res/
+Dockerfile
+.editorconfig
+.gitignore
+firebase.json
+.firebaserc
+.nvmrc
