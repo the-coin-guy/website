@@ -6,7 +6,7 @@
 $DOCKER_IMAGE_NAME = "the-coin-guy/website"
 $DOCKER_IMAGE_VERSION = "latest"
 $DOCKER_CONTAINER_NAME = "the-coin-guy-website"
-$WEB_PORT = 4200
+$WEB_PORT = 8080
 
 # Stop running docker container
 docker stop $DOCKER_CONTAINER_NAME 2> $null

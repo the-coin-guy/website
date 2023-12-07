@@ -10,7 +10,7 @@ COPY . ./
 RUN yarn install --frozen-lockfile
 
 # Open up relavent port
-EXPOSE 4200
+EXPOSE 8080
 
 # Start the webapp
 CMD [ "yarn", "start", "--host" ]

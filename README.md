@@ -18,7 +18,7 @@
     yarn start
     ```
 
-- Visit [http://localhost:4200/](http://localhost:4200/) locally
+- Visit [http://localhost:8080/](http://localhost:8080/) locally
 
 
 ## Deployment
