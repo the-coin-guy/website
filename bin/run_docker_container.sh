@@ -17,5 +17,5 @@ docker rm $DOCKER_CONTAINER_NAME 2> /dev/null
 docker run --detach \
            --name $DOCKER_CONTAINER_NAME \
            -p "$WEB_PORT":"$WEB_PORT" \
-           -e "VITE_PORT=$WEB_PORT" \
+           -e "PORT=$WEB_PORT" \
            "$DOCKER_IMAGE_NAME:$DOCKER_IMAGE_VERSION"

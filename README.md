@@ -27,7 +27,7 @@
     yarn build
     ```
 
-- Copy the contents of the generated `dist/` into the root of the local [the-coin-guy.github.io](https://github.com/the-coin-guy/the-coin-guy.github.io) git repository
+- Copy the contents of the generated `build/` into the root of the local [the-coin-guy.github.io](https://github.com/the-coin-guy/the-coin-guy.github.io) git repository
     ```bash
     ./bin/deploy.sh
     ```

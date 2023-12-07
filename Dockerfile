@@ -13,4 +13,4 @@ RUN yarn install --frozen-lockfile
 EXPOSE 4200
 
 # Start the webapp
-CMD [ "yarn", "start" ]
+CMD [ "yarn", "start", "--host" ]

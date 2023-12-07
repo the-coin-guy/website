@@ -11,7 +11,7 @@ PARENT_PATH="$SCRIPT_DIR/.."
 GITHUB_PAGE_REPO_LOCAL_PATH="$PARENT_PATH/../the-coin-guy.github.io"
 
 # Copy generated static files to server repo
-cp -r dist/website/browser/* "$GITHUB_PAGE_REPO_LOCAL_PATH"
+cp -r build/website/browser/* "$GITHUB_PAGE_REPO_LOCAL_PATH"
 
 # Git commit up changes
 pushd "$GITHUB_PAGE_REPO_LOCAL_PATH"
