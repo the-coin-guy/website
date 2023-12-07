@@ -12,7 +12,7 @@ import { PhotoModalComponent, PhotoModalData } from "../photo-modal/photo-modal.
         NgForOf
     ],
     templateUrl: "./photo-grid.component.html",
-    styleUrl: "./photo-grid.component.sass"
+    styleUrl: "./photo-grid.component.scss"
 })
 
 export class PhotoGridComponent {

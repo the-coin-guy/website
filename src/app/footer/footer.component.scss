@@ -1,0 +1,13 @@
+@import "../../theme.scss";
+
+
+footer {
+    position: sticky;
+    background-color: $primary-color;
+    color: white;
+}
+
+.footer-content {
+    margin: 0 auto;
+    text-align: center;
+}

@@ -12,7 +12,7 @@ import { MatToolbarModule } from "@angular/material/toolbar";
         MatButtonModule
     ],
     templateUrl: "./navbar.component.html",
-    styleUrl: "./navbar.component.sass"
+    styleUrl: "./navbar.component.scss"
 })
 
 export class NavbarComponent {
