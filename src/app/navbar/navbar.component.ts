@@ -17,4 +17,6 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 
 export class NavbarComponent {
     @Input() appName!: string;
+
+    icon: string = "savings"; // "monetization_on" , "store"
 }

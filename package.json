@@ -1,9 +1,9 @@
 {
     "name": "website",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "scripts": {
         "ng": "ng",
-        "start": "ng serve",
+        "start": "ng serve --poll=2000",
         "build": "ng build",
         "watch": "ng build --watch --configuration development",
         "deploy": "yarn build && ./bin/deploy.sh"
