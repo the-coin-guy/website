@@ -59,6 +59,34 @@ export class CardDeckComponent {
                 imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
                 altText: "A quarter",
                 showActions: true
+            },
+
+            {
+                id: "penny",
+                title: "Penny",
+                subTitle: "Hello world",
+                imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
+                altText: "A penny"
+            },
+            {
+                id: "nickel",
+                title: "Nickel",
+                imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
+                altText: "A nickel",
+                description: "Hello there!"
+            },
+            {
+                id: "dime",
+                title: "Dime",
+                imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
+                altText: "A dime"
+            },
+            {
+                id: "quarter",
+                title: "Quarter",
+                imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
+                altText: "A quarter",
+                showActions: true
             } ];
     }
 }

@@ -1,20 +1,23 @@
 footer {
     position: sticky;
     padding: 5px;
+    background-color: var(--mdc-elevated-card-container-color);
+    color: var(--mat-card-subtitle-text-color);
 }
 
 .footer-content {
+    padding-top: 2px;
+    padding-bottom: 2px;
     margin: 0 auto;
     text-align: center;
 }
 
 .footer-text {
-    color: #818181;
     padding: 0;
 }
 
 .footer-icon {
-    color: #818181;
+    color: var(--mat-card-subtitle-text-color);
     font-size: 18px;
     margin: 5px;
 }
