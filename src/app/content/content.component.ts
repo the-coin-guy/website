@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { PhotoGridComponent } from "../photo-grid/photo-grid.component";
+import { CardDeckComponent } from "../card-deck/card-deck.component";
 
 @Component({
   selector: 'app-content',
   standalone: true,
   imports: [
-      PhotoGridComponent
+      CardDeckComponent
   ],
   templateUrl: './content.component.html',
   styleUrl: './content.component.scss'

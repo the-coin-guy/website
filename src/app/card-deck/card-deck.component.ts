@@ -2,9 +2,7 @@ import { NgForOf, NgIf } from "@angular/common";
 import { Component } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
-import { MatDialog } from "@angular/material/dialog";
 import { MatGridListModule } from "@angular/material/grid-list";
-import { PhotoModalComponent } from "../photo-modal/photo-modal.component";
 
 export interface PhotoModalData {
     id: string;
@@ -15,7 +13,7 @@ export interface PhotoModalData {
 }
 
 @Component({
-    selector: "app-photo-grid",
+    selector: "app-card-deck",
     standalone: true,
     imports: [
         MatGridListModule,
@@ -24,14 +22,14 @@ export interface PhotoModalData {
         MatCardModule,
         MatButtonModule
     ],
-    templateUrl: "./photo-grid.component.html",
-    styleUrl: "./photo-grid.component.scss"
+    templateUrl: "./card-deck.component.html",
+    styleUrl: "./card-deck.component.scss"
 })
 
-export class PhotoGridComponent {
+export class CardDeckComponent {
     cards: PhotoModalData[];
 
-    constructor(public dialog: MatDialog) {
+    constructor() {
         this.cards = [
             {
                 id: "penny",
@@ -56,31 +54,6 @@ export class PhotoGridComponent {
                 title: "Quarter",
                 image: "https://material.angular.io/assets/img/examples/shiba2.jpg",
                 altText: "A quarter"
-            }];
-  }
-
-  openDialog(photoId: string): void {
-        const dialogRef = this.dialog.open(PhotoModalComponent, {
-            // width:  "250px",
-            data: getPhotoFromId(photoId, this.cards)
-        });
-
-        dialogRef.afterClosed().subscribe(_ => {
-            console.log("The dialog was closed");
-        });
-  }
-}
-
-const getPhotoFromId = (photoId: string, photos: PhotoModalData[]): PhotoModalData => {
-    const photo = photos.filter((p) => p.id === photoId);
-    if (photo.length > 0) {
-        return photo[0];
-    } else {
-        return {
-            id: "abc",
-            title: "BLANK",
-            image: "http://placekitten.com/200/300",
-            altText: "An image"
-        }
+            } ];
     }
-};
+}
