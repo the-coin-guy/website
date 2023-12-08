@@ -8,13 +8,7 @@ import {
   MatDialogRef,
   MatDialogTitle
 } from "@angular/material/dialog";
-
-export interface PhotoModalData {
-    id: string;
-    title: string;
-    description: string;
-    image: string;
-}
+import { PhotoModalData } from "../photo-grid/photo-grid.component";
 
 @Component({
     selector: "app-photo-modal",

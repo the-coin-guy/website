@@ -1,55 +1,68 @@
-import { NgForOf } from "@angular/common";
+import { NgForOf, NgIf } from "@angular/common";
 import { Component } from "@angular/core";
+import { MatButtonModule } from "@angular/material/button";
+import { MatCardModule } from "@angular/material/card";
 import { MatDialog } from "@angular/material/dialog";
 import { MatGridListModule } from "@angular/material/grid-list";
-import { PhotoModalComponent, PhotoModalData } from "../photo-modal/photo-modal.component";
+import { PhotoModalComponent } from "../photo-modal/photo-modal.component";
+
+export interface PhotoModalData {
+    id: string;
+    title: string;
+    description?: string;
+    image: string;
+    altText: string;
+}
 
 @Component({
     selector: "app-photo-grid",
     standalone: true,
     imports: [
         MatGridListModule,
-        NgForOf
+        NgForOf,
+        NgIf,
+        MatCardModule,
+        MatButtonModule
     ],
     templateUrl: "./photo-grid.component.html",
     styleUrl: "./photo-grid.component.scss"
 })
 
 export class PhotoGridComponent {
-    photos: PhotoModalData[];
+    cards: PhotoModalData[];
 
     constructor(public dialog: MatDialog) {
-        this.photos = [
+        this.cards = [
             {
                 id: "penny",
                 title: "Penny",
-                description: "A penny",
-                image: "http://placekitten.com/200/300"
+                image: "https://material.angular.io/assets/img/examples/shiba2.jpg",
+                altText: "A penny"
             },
             {
                 id: "nickel",
                 title: "Nickel",
-                description: "A nickel",
-                image: "http://placekitten.com/200/300"
+                image: "https://material.angular.io/assets/img/examples/shiba2.jpg",
+                altText: "A nickel"
             },
             {
                 id: "dime",
                 title: "Dime",
-                description: "A dime",
-                image: "http://placekitten.com/200/300"
+                image: "https://material.angular.io/assets/img/examples/shiba2.jpg",
+                altText: "A dime"
             },
             {
                 id: "quarter",
                 title: "Quarter",
-                description: "A quarter",
-                image: "http://placekitten.com/200/300"
+                image: "https://material.angular.io/assets/img/examples/shiba2.jpg",
+                altText: "A quarter"
             }];
   }
 
   openDialog(photoId: string): void {
         const dialogRef = this.dialog.open(PhotoModalComponent, {
             // width:  "250px",
-            data: getPhotoFromId(photoId, this.photos)
+            data: getPhotoFromId(photoId, this.cards)
         });
 
         dialogRef.afterClosed().subscribe(_ => {
@@ -66,8 +79,8 @@ const getPhotoFromId = (photoId: string, photos: PhotoModalData[]): PhotoModalDa
         return {
             id: "abc",
             title: "BLANK",
-            description: "filler data",
-            image: "http://placekitten.com/200/300"
+            image: "http://placekitten.com/200/300",
+            altText: "An image"
         }
     }
 };
