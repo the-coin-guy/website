@@ -19,10 +19,34 @@ img {
 
 .responsive-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(
+            auto-fill,
+            minmax(
+                    250px,
+                    1fr
+            )
+    );
     gap: 24px;
 }
 
 mat-card-actions {
     min-height: 15px;
+}
+
+.card-slot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-card-title {}
+
+mat-card-subtitle {}
+
+.card-image {
+    margin-top: 10px;
+}
+
+mat-card-content {
+    margin-top: 15px;
 }
