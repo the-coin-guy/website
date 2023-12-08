@@ -1,3 +1,16 @@
 <div class="container">
+    <div class="content-box">
+        <fa-icon
+            class="filter-icon"
+            [icon]="filterIcon"
+        />
+        <mat-form-field class="filter-textbox">
+            <input
+                matInput
+                placeholder="Coin Name"
+                value=""
+            />
+        </mat-form-field>
+    </div>
     <app-card-deck/>
 </div>

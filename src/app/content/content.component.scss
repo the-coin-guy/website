@@ -2,9 +2,18 @@
     align-items: center;
     flex-direction: column;
     padding: 16px;
-    width: 80%;
-    max-width: 1080px;
+    width: 85%;
+    //max-width: 1080px;
     margin: auto;
     height: 100%;
     min-height: 85vh;
+}
+
+.filter-icon {
+    padding-right: 15px;
+}
+
+.content-box {
+    text-align: end;
+    margin-right: 25px;
 }
