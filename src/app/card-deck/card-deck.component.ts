@@ -7,8 +7,9 @@ import { MatGridListModule } from "@angular/material/grid-list";
 export interface PhotoModalData {
     id: string;
     title: string;
+    subTitle?: string;
     description?: string;
-    image: string;
+    imageUrl: string;
     altText: string;
 }
 
@@ -34,25 +35,27 @@ export class CardDeckComponent {
             {
                 id: "penny",
                 title: "Penny",
-                image: "https://material.angular.io/assets/img/examples/shiba2.jpg",
+                subTitle: "Hello world",
+                imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
                 altText: "A penny"
             },
             {
                 id: "nickel",
                 title: "Nickel",
-                image: "https://material.angular.io/assets/img/examples/shiba2.jpg",
-                altText: "A nickel"
+                imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
+                altText: "A nickel",
+                description: "Hello there!"
             },
             {
                 id: "dime",
                 title: "Dime",
-                image: "https://material.angular.io/assets/img/examples/shiba2.jpg",
+                imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
                 altText: "A dime"
             },
             {
                 id: "quarter",
                 title: "Quarter",
-                image: "https://material.angular.io/assets/img/examples/shiba2.jpg",
+                imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
                 altText: "A quarter"
             } ];
     }
