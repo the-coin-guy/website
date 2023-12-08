@@ -1,10 +1,20 @@
 footer {
     position: sticky;
-    color: #595959;
     padding: 5px;
 }
 
 .footer-content {
     margin: 0 auto;
     text-align: center;
+}
+
+.footer-text {
+    color: #595959;
+    padding: 0px;
+}
+
+.footer-icon {
+    color: #595959;
+    font-size: 18px;
+    margin: 5px;
 }

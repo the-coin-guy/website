@@ -1,12 +1,12 @@
 <footer>
     <div class="footer-container">
-        <p class="footer-content">
-            {{appName}} &copy;{{currentYear}}
+        <div class="footer-content">
+            <span class="footer-text">
+                {{appName}} &copy;{{currentYear}}
+            </span>
             <a href="https://github.com/the-coin-guy/website">
-                <mat-icon class="footer-code-icon">
-                    terminal
-                </mat-icon>
+                <fa-icon class="footer-icon" [icon]="githubIcon"></fa-icon>
             </a>
-        </p>
+        </div>
     </div>
 </footer>
