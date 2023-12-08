@@ -1,11 +1,28 @@
 <footer>
     <div class="footer-container">
         <div class="footer-content">
-            <span class="footer-text">
+            <div class="footer-text">
                 {{appName}} &copy;{{currentYear}}
-            </span>
-            <a href="https://github.com/the-coin-guy/website">
-                <fa-icon class="footer-icon" [icon]="githubIcon"></fa-icon>
+            </div>
+            <a
+                mat-icon-button
+                class="footer-icon-button"
+                href="{{githubUrl}}"
+            >
+                <fa-icon
+                    class="footer-icon"
+                    [icon]="githubIcon"
+                />
+            </a>
+            <a
+                mat-icon-button
+                class="footer-icon-button"
+                href="{{mailHref}}"
+            >
+                <fa-icon
+                    class="footer-icon"
+                    [icon]="mailIcon"
+                />
             </a>
         </div>
     </div>

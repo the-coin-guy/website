@@ -13,11 +13,12 @@ footer {
 }
 
 .footer-text {
-    padding: 0;
+    display: inline-block;
+    vertical-align: super;
+    padding-right: 5px;
+    font-size: 15px;
 }
 
-.footer-icon {
-    color: var(--mat-card-subtitle-text-color);
-    font-size: 18px;
-    margin: 5px;
-}
+.footer-icon-button {}
+
+.footer-icon {}
