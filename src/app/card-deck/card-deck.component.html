@@ -1,44 +1,10 @@
-<!--<mat-grid-list-->
-<!--    cols="2"-->
-<!--    rowHeight="2:1"-->
-<!--&gt;-->
-
-<!--    <mat-card *ngFor="let card of cards()">-->
-
-<!--    <div *ngFor="let card of cards">-->
-<!--        <mat-card id="card_{{card.id}}" class="example-card">-->
-<!--            <mat-card-header>-->
-<!--                <div-->
-<!--                    mat-card-avatar-->
-<!--                    class="example-header-image"></div>-->
-<!--                <mat-card-title>-->
-<!--                    Shiba Inu-->
-<!--                </mat-card-title>-->
-<!--                <mat-card-subtitle>-->
-<!--                    Dog Breed-->
-<!--                </mat-card-subtitle>-->
-<!--            </mat-card-header>-->
-<!--            <img-->
-<!--                mat-card-image-->
-<!--                src="{{card.image}}"-->
-<!--                alt="{{card.altText}}"-->
-<!--            >-->
-<!--            <mat-card-content>-->
-<!--                <h6>-->
-<!--                    {{card.title}}-->
-<!--                </h6>-->
-<!--                <p-->
-<!--                    *ngIf="card.description"-->
-<!--                >-->
-<!--                    {{card.description}}-->
-<!--                </p>-->
-<!--            </mat-card-content>-->
-<!--        </mat-card>-->
-<!--    </div>-->
-<!--</mat-grid-list>-->
-
-<div class="container responsive-grid">
-    <div class="card-slot" *ngFor="let card of cards">
+<div
+    class="container responsive-grid"
+>
+    <div
+        class="card-slot"
+        *ngFor="let card of cards"
+    >
         <mat-card>
             <mat-card-header>
                 <mat-card-title>
@@ -54,7 +20,7 @@
                 class="card-image"
                 mat-card-image
                 alt="{{card.altText}}"
-                [src]="card.imageUrl"
+                src="{{card.imageUrl}}"
             />
             <mat-card-content
                 *ngIf="card.description"
@@ -63,10 +29,16 @@
                     {{ card.description }}
                 </p>
             </mat-card-content>
-            <!--        <mat-card-actions>-->
-            <!--            <button mat-button>LIKE</button>-->
-            <!--            <button mat-button>SHARE</button>-->
-            <!--        </mat-card-actions>-->
+            <mat-card-actions
+                *ngIf="card.showActions"
+            >
+                <button mat-button>
+                    LIKE
+                </button>
+                <button mat-button>
+                    SHARE
+                </button>
+            </mat-card-actions>
         </mat-card>
     </div>
 </div>

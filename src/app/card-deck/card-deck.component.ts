@@ -11,6 +11,7 @@ export interface PhotoModalData {
     description?: string;
     imageUrl: string;
     altText: string;
+    showActions?: boolean;
 }
 
 @Component({
@@ -56,7 +57,8 @@ export class CardDeckComponent {
                 id: "quarter",
                 title: "Quarter",
                 imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
-                altText: "A quarter"
+                altText: "A quarter",
+                showActions: true
             } ];
     }
 }
