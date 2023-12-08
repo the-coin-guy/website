@@ -1,11 +1,9 @@
 <main class="main">
-    <div class="content">
-        <app-navbar [appName]="appName"/>
-        <div class="container">
-            <app-photo-grid/>
-        </div>
-        <app-footer [appName]="appName"/>
+    <app-navbar [appName]="appName"/>
+    <div class="container">
+        <app-photo-grid/>
     </div>
+    <app-footer [appName]="appName"/>
 </main>
 
 <router-outlet></router-outlet>
