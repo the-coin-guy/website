@@ -90,4 +90,31 @@ export class CardDeckComponent {
                 showActions: true
             } ];
     }
+
+    get filteredCards(): PhotoModalData[] {
+        return this.cards.filter(
+            (card: PhotoModalData) =>
+                card.title
+                    .toLowerCase()
+                    .includes(
+                        this.filterText.toLowerCase()
+                    ) ||
+                (
+                    card.subTitle &&
+                    card.subTitle
+                        .toLowerCase()
+                        .includes(
+                            this.filterText.toLowerCase()
+                        )
+                ) ||
+                (
+                    card.description &&
+                    card.description
+                        .toLowerCase()
+                        .includes(
+                            this.filterText.toLowerCase()
+                        )
+                )
+        );
+    }
 }
