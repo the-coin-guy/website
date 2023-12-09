@@ -35,60 +35,35 @@ export class CardDeckComponent {
     constructor() {
         this.cards = [
             {
-                id: "penny",
-                title: "Penny",
-                subTitle: "Hello world",
-                imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
-                altText: "A penny"
+                id: "1984_penny",
+                title: "1984 Penny",
+                imageUrl: "../../assets/1984_penny.jpeg",
+                altText: "A 1984 Penny"
             },
             {
-                id: "nickel",
-                title: "Nickel",
-                imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
-                altText: "A nickel",
-                description: "Hello there!"
+                id: "2016_nickel",
+                title: "2016 Nickel",
+                imageUrl: "../../assets/2016_nickel.jpeg",
+                altText: "A 2016 Nickel",
             },
             {
-                id: "dime",
-                title: "Dime",
-                imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
-                altText: "A dime"
+                id: "1975_dime",
+                title: "1975 Dime",
+                imageUrl: "../../assets/1975_dime.jpeg",
+                altText: "A 1975 Dime"
             },
             {
-                id: "quarter",
-                title: "Quarter",
-                imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
-                altText: "A quarter",
-                showActions: true
-            },
-
-            {
-                id: "penny",
-                title: "Penny",
-                subTitle: "Hello world",
-                imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
-                altText: "A penny"
+                id: "1995_quarter",
+                title: "1995 Quarter",
+                imageUrl: "../../assets/1995_quarter.jpeg",
+                altText: "A 1995 Quarter",
             },
             {
-                id: "nickel",
-                title: "Nickel",
-                imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
-                altText: "A nickel",
-                description: "Hello there!"
-            },
-            {
-                id: "dime",
-                title: "Dime",
-                imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
-                altText: "A dime"
-            },
-            {
-                id: "quarter",
-                title: "Quarter",
-                imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
-                altText: "A quarter",
-                showActions: true
-            } ];
+                id: "1965_half_dollar",
+                title: "1965 Half Dollar",
+                imageUrl: "../../assets/1965_half_dollar.jpeg",
+                altText: "A 1965 Half Dollar"
+            }];
     }
 
     get filteredCards(): PhotoModalData[] {
