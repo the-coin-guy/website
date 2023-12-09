@@ -1,27 +1,68 @@
-@use "@angular/material" as mat;
+@import "@angular/material/core/core";
+@import "@angular/material/core/theming/all-theme";
+@import "@angular/material/core/theming/inspection";
+@import "@angular/material/core/theming/palette";
+@import "@angular/material/core/theming/theming";
+@import "@angular/material/core/typography/definition";
+@import "@angular/material/core/typography/typography";
 
-// Include non-theme styles for core.
-@include mat.core();
 
-// Define variables.
-$my-app-primary: mat.define-palette(mat.$blue-gray-palette);
-$my-app-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-$my-app-warn: mat.define-palette(mat.$red-palette);
+// Include non-theme styles for core
+@include core();
 
-// Define theme.
-$my-app-theme: mat.define-dark-theme((
+// Define custom pallet
+$brass-palette: (
+    50: #e8eaf6,
+    100: #f1ecd5,
+    200: #dcd5a6,
+    300: #c5bc7e,
+    400: #ada35f,
+    500: #988e4a,  // TODO: here
+    600: #817838,
+    700: #6c642b,
+    800: #675f28,
+    900: #4d471b,
+    A100: #c5bc7e,
+    A200: #ada35f,
+    A400: #988e4a,
+    A700: #817838,
+    contrast: (
+        50: $dark-primary-text,
+        100: $dark-primary-text,
+        200: $dark-primary-text,
+        300: $light-primary-text,
+        400: $light-primary-text,
+        500: $light-primary-text,
+        600: $light-primary-text,
+        700: $light-primary-text,
+        800: $light-primary-text,
+        900: $light-primary-text,
+        A100: $dark-primary-text,
+        A200: $light-primary-text,
+        A400: $light-primary-text,
+        A700: $light-primary-text,
+    )
+);
+
+// Define variables
+$my-app-primary: define-palette($brass-palette);
+$my-app-accent: define-palette($pink-palette, A200, A100, A400);
+$my-app-warn: define-palette($red-palette);
+
+// Define theme
+$my-app-theme: define-dark-theme((
     color: (
         primary: $my-app-primary,
         accent: $my-app-accent,
         warn: $my-app-warn,
     ),
-    typography: mat.define-typography-config(),
+    typography: define-typography-config(),
     density: 0,
 ));
 
-// Define computed theme variables.
-$primary-color: mat.get-theme-color($my-app-theme, primary);
+// Define computed theme variables
+$primary-color: get-theme-color($my-app-theme, primary);
 
-// Include all theme styles for the components.
-@include mat.all-component-themes($my-app-theme);
-@include mat.typography-hierarchy($my-app-theme);
+// Include all theme styles for the components
+@include all-component-themes($my-app-theme);
+@include typography-hierarchy($my-app-theme);

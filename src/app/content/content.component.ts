@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormsModule } from "@angular/forms";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { FaIconComponent } from "@fortawesome/angular-fontawesome";
@@ -13,7 +14,8 @@ import { CardDeckComponent } from "../card-deck/card-deck.component";
         CardDeckComponent,
         MatFormFieldModule,
         MatInputModule,
-        FaIconComponent
+        FaIconComponent,
+        FormsModule
     ],
   templateUrl: './content.component.html',
   styleUrl: './content.component.scss'
@@ -21,4 +23,10 @@ import { CardDeckComponent } from "../card-deck/card-deck.component";
 
 export class ContentComponent {
     filterIcon: IconDefinition = faFilter;
+    filterText: string = "";
+
+    onFilterTextChange(pressedKey: string): void {
+        console.log({pressedKey});
+        this.filterText = pressedKey;
+    }
 }

@@ -4,13 +4,19 @@
             class="filter-icon"
             [icon]="filterIcon"
         />
-        <mat-form-field class="filter-textbox">
+        <mat-form-field
+            class="filter-textbox"
+        >
             <input
                 matInput
+                type="text"
                 placeholder="Coin Name"
-                value=""
+                [ngModel]="filterText"
+                (ngModelChange)="onFilterTextChange($event)"
             />
         </mat-form-field>
     </div>
-    <app-card-deck/>
+    <app-card-deck
+        [filterText]="filterText"
+    />
 </div>
