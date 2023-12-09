@@ -1,16 +1,16 @@
 <div class="container">
     <div class="content-box">
-        <fa-icon
-            class="filter-icon"
-            [icon]="filterIcon"
-        />
+<!--        <fa-icon-->
+<!--            class="filter-icon"-->
+<!--            [icon]="filterIcon"-->
+<!--        />-->
         <mat-form-field
             class="filter-textbox"
         >
             <input
                 matInput
                 type="text"
-                placeholder="Coin Name"
+                placeholder="Filter Text"
                 [ngModel]="filterText"
                 (ngModelChange)="onFilterTextChange($event)"
             />
