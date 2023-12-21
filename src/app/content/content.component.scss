@@ -14,8 +14,17 @@
 }
 
 .content-box {
-    text-align: end;
-    margin-left: 25px;
-    margin-right: 25px;
-    height: 50px;
+    display: block;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.sort-by-button-group-container {
+    display: inline-block;
+    padding-right: 25px;
+    padding-bottom: 5px;
+}
+
+.filter-text-field-container {
+    display: inline-block;
 }

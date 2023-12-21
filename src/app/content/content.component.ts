@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { FormsModule } from "@angular/forms";
+import { MatButtonToggleModule } from "@angular/material/button-toggle";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { FaIconComponent } from "@fortawesome/angular-fontawesome";
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import { faFilter } from "@fortawesome/free-solid-svg-icons";
 import { CardDeckComponent } from "../card-deck/card-deck.component";
+
+export type SortByOption = "acquired" | "alpha" | "creation";
 
 @Component({
   selector: 'app-content',
@@ -15,18 +16,22 @@ import { CardDeckComponent } from "../card-deck/card-deck.component";
         MatFormFieldModule,
         MatInputModule,
         FaIconComponent,
-        FormsModule
+        FormsModule,
+        MatButtonToggleModule
     ],
   templateUrl: './content.component.html',
   styleUrl: './content.component.scss'
 })
 
 export class ContentComponent {
-    filterIcon: IconDefinition = faFilter;
     filterText: string = "";
+    sortOption: SortByOption = "alpha";
 
     onFilterTextChange(pressedKey: string): void {
-        console.log({pressedKey});
         this.filterText = pressedKey;
+    }
+
+    onSortByButtonChange(option: SortByOption): void {
+        this.sortOption = option;
     }
 }

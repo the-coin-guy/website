@@ -1,22 +1,43 @@
 <div class="container">
     <div class="content-box">
-<!--        <fa-icon-->
-<!--            class="filter-icon"-->
-<!--            [icon]="filterIcon"-->
-<!--        />-->
-        <mat-form-field
-            class="filter-textbox"
-        >
-            <input
-                matInput
-                type="text"
-                placeholder="Filter Text"
-                [ngModel]="filterText"
-                (ngModelChange)="onFilterTextChange($event)"
-            />
-        </mat-form-field>
+        <div class="sort-by-button-group-container">
+            <mat-button-toggle-group
+                class="sort-by-button-group"
+                name="sortBy"
+                [ngModel]="sortOption"
+                (ngModelChange)="onSortByButtonChange($event)"
+            >
+                <mat-button-toggle
+                    value="acquired"
+                >
+                    Newest In
+                </mat-button-toggle>
+                <mat-button-toggle
+                    value="creation"
+                >
+                    Creation Date
+                </mat-button-toggle>
+                <mat-button-toggle
+                    value="alpha"
+                >
+                    Alphabetical
+                </mat-button-toggle>
+            </mat-button-toggle-group>
+        </div>
+        <div class="filter-text-field-container">
+            <mat-form-field class="filter-text-field">
+                <input
+                    matInput
+                    type="text"
+                    placeholder="Filter Text"
+                    [ngModel]="filterText"
+                    (ngModelChange)="onFilterTextChange($event)"
+                />
+            </mat-form-field>
+        </div>
     </div>
     <app-card-deck
         [filterText]="filterText"
+        [sortOption]="sortOption"
     />
 </div>
