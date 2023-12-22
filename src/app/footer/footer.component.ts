@@ -1,6 +1,7 @@
 import { Component, Input } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
+import { MatTooltipModule } from "@angular/material/tooltip";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -12,7 +13,8 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
     imports: [
         MatIconModule,
         FontAwesomeModule,
-        MatButtonModule
+        MatButtonModule,
+        MatTooltipModule
     ],
     templateUrl: "./footer.component.html",
     styleUrl: "./footer.component.scss"

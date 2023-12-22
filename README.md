@@ -4,6 +4,10 @@ Webite Source Code
 [Public website](https://the-coin-guy.github.io)
 
 
+## Resources
+- [Angular Material UI](https://material.angular.io)
+
+
 ## Pre-requisites
 - Ensure `git` is installed
 - Ensure the [public website repository](https://github.com/the-coin-guy/the-coin-guy.github.io) is downloaded locally in same directory as this git repository
