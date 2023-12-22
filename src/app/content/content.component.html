@@ -7,7 +7,9 @@
                 [ngModel]="sortOption"
                 (ngModelChange)="onSortByButtonChange($event)"
             >
-                <mat-button-toggle disabled>
+                <mat-button-toggle
+                    disabled="true"
+                >
                     <mat-icon>
                         sort
                     </mat-icon>
@@ -16,7 +18,7 @@
                     value="acquired"
                 >
                     <mat-icon>
-                        whatshot fiber_new
+                        whatshot
                     </mat-icon>
                 </mat-button-toggle>
                 <mat-button-toggle
@@ -30,12 +32,12 @@
                     value="alpha"
                 >
                     <mat-icon>
-                        font_download sort_by_alpha
+                        font_download
                     </mat-icon>
                 </mat-button-toggle>
             </mat-button-toggle-group>
         </div>
-        <div class="filter-text-field-container" appearance="fill">
+        <div class="filter-text-field-container">
             <mat-form-field class="filter-text-field">
                 <input
                     matInput
