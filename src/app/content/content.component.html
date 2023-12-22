@@ -7,32 +7,48 @@
                 [ngModel]="sortOption"
                 (ngModelChange)="onSortByButtonChange($event)"
             >
+                <mat-button-toggle disabled>
+                    <mat-icon>
+                        sort
+                    </mat-icon>
+                </mat-button-toggle>
                 <mat-button-toggle
                     value="acquired"
                 >
-                    Newest In
+                    <mat-icon>
+                        whatshot fiber_new
+                    </mat-icon>
                 </mat-button-toggle>
                 <mat-button-toggle
                     value="creation"
                 >
-                    Creation Date
+                    <mat-icon>
+                        access_time
+                    </mat-icon>
                 </mat-button-toggle>
                 <mat-button-toggle
                     value="alpha"
                 >
-                    Alphabetical
+                    <mat-icon>
+                        font_download sort_by_alpha
+                    </mat-icon>
                 </mat-button-toggle>
             </mat-button-toggle-group>
         </div>
-        <div class="filter-text-field-container">
+        <div class="filter-text-field-container" appearance="fill">
             <mat-form-field class="filter-text-field">
                 <input
                     matInput
                     type="text"
-                    placeholder="Filter Text"
+                    placeholder="Search"
                     [ngModel]="filterText"
                     (ngModelChange)="onFilterTextChange($event)"
                 />
+                <mat-icon
+                    matPrefix
+                >
+                    filter_list
+                </mat-icon>
             </mat-form-field>
         </div>
     </div>
