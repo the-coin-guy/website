@@ -1,8 +1,12 @@
-# The Coin Guy website
+# The Coin Guy
+
+Webite Source Code  
+[Public website](https://the-coin-guy.github.io)
 
 
 ## Pre-requisites
-- Locally git clone [the-coin-guy.github.io](https://github.com/the-coin-guy/the-coin-guy.github.io) git repository in same directory as this git repository
+- Ensure `git` is installed
+- Ensure the [public website repository](https://github.com/the-coin-guy/the-coin-guy.github.io) is downloaded locally in same directory as this git repository
 
 
 ## Installation
@@ -18,16 +22,11 @@
     yarn start
     ```
 
-- Visit [http://localhost:8080/](http://localhost:8080/) locally
+- Visit [http://localhost:8080](http://localhost:8080/)
 
 
 ## Deployment
-- In order to build the static files, run:
-    ```bash
-    yarn build
-    ```
-
-- Copy the contents of the generated `build/` into the root of the local [the-coin-guy.github.io](https://github.com/the-coin-guy/the-coin-guy.github.io) git repository
+- Deploy with the following:
     ```bash
     ./bin/deploy.sh
     ```
