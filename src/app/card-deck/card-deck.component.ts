@@ -1,23 +1,11 @@
-import { NgForOf, NgIf } from "@angular/common";
+import { NgForOf } from "@angular/common";
 import { Component, Input } from "@angular/core";
-import { MatButtonModule } from "@angular/material/button";
-import { MatCardModule } from "@angular/material/card";
 import { MatGridListModule } from "@angular/material/grid-list";
+import { CardComponent, CardData } from "../card/card.component";
 import { SortByOption } from "../content/content.component";
 
-export interface PhotoModalData {
-    id: string;
-    title: string;
-    subTitle?: string;
-    description?: string;
-    imageUrl: string;
-    altText: string;
-    showActions?: boolean;
-    acquired: Date;
-    created: Date;
-}
 
-const filterByContainText = (filterText: string) => (card: PhotoModalData) =>
+const filterByContainText = (filterText: string) => (card: CardData) =>
         card.title
             .toLowerCase()
             .includes(
@@ -40,7 +28,7 @@ const filterByContainText = (filterText: string) => (card: PhotoModalData) =>
                 )
         );
 
-const sortBy = (sortByOption: SortByOption): (card1: PhotoModalData, card2: PhotoModalData) => number => {
+const sortBy = (sortByOption: SortByOption): (card1: CardData, card2: CardData) => number => {
     if (sortByOption === "creation") {
         return sortByCreated;
     } else if (sortByOption === "acquired"){
@@ -50,13 +38,13 @@ const sortBy = (sortByOption: SortByOption): (card1: PhotoModalData, card2: Phot
     }
 };
 
-const sortByCreated = (card1: PhotoModalData, card2: PhotoModalData) =>
+const sortByCreated = (card1: CardData, card2: CardData) =>
         card1.created.getTime() - card2.created.getTime();
 
-const sortByAcquired = (card1: PhotoModalData, card2: PhotoModalData) =>
+const sortByAcquired = (card1: CardData, card2: CardData) =>
     card1.acquired.getTime() - card2.acquired.getTime();
 
-const sortAlpha = (card1: PhotoModalData, card2: PhotoModalData) => {
+const sortAlpha = (card1: CardData, card2: CardData) => {
     if (card1.title < card2.title) {
         return -1;
     }
@@ -72,9 +60,7 @@ const sortAlpha = (card1: PhotoModalData, card2: PhotoModalData) => {
     imports: [
         MatGridListModule,
         NgForOf,
-        NgIf,
-        MatCardModule,
-        MatButtonModule
+        CardComponent
     ],
     templateUrl: "./card-deck.component.html",
     styleUrl: "./card-deck.component.scss"
@@ -83,7 +69,7 @@ const sortAlpha = (card1: PhotoModalData, card2: PhotoModalData) => {
 export class CardDeckComponent {
     @Input() filterText!: string;
     @Input() sortOption!: SortByOption;
-    cards: PhotoModalData[];
+    cards: CardData[];
 
     constructor() {
         this.cards = [
@@ -129,7 +115,7 @@ export class CardDeckComponent {
             }];
     }
 
-    get filteredCards(): PhotoModalData[] {
+    get filteredCards(): CardData[] {
         return this.cards
             .filter(filterByContainText(this.filterText))
             .sort(sortBy(this.sortOption));

@@ -1,0 +1,35 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            {{ data.title }}
+        </mat-card-title>
+        <mat-card-subtitle
+            *ngIf="data.subTitle"
+        >
+            {{ data.subTitle }}
+        </mat-card-subtitle>
+    </mat-card-header>
+    <img
+        class="card-image"
+        mat-card-image
+        alt="{{data.altText}}"
+        src="{{data.imageUrl}}"
+    />
+    <mat-card-content
+        *ngIf="data.description"
+    >
+        <p>
+            {{ data.description }}
+        </p>
+    </mat-card-content>
+    <mat-card-actions
+        *ngIf="data.showActions"
+    >
+        <button mat-button>
+            LIKE
+        </button>
+        <button mat-button>
+            SHARE
+        </button>
+    </mat-card-actions>
+</mat-card>

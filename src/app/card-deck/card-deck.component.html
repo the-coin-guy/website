@@ -1,44 +1,5 @@
-<div
-    class="container responsive-grid"
->
-    <div
-        class="card-slot"
-        *ngFor="let card of filteredCards"
-    >
-        <mat-card>
-            <mat-card-header>
-                <mat-card-title>
-                    {{ card.title }}
-                </mat-card-title>
-                <mat-card-subtitle
-                    *ngIf="card.subTitle"
-                >
-                    {{ card.subTitle }}
-                </mat-card-subtitle>
-            </mat-card-header>
-            <img
-                class="card-image"
-                mat-card-image
-                alt="{{card.altText}}"
-                src="{{card.imageUrl}}"
-            />
-            <mat-card-content
-                *ngIf="card.description"
-            >
-                <p>
-                    {{ card.description }}
-                </p>
-            </mat-card-content>
-            <mat-card-actions
-                *ngIf="card.showActions"
-            >
-                <button mat-button>
-                    LIKE
-                </button>
-                <button mat-button>
-                    SHARE
-                </button>
-            </mat-card-actions>
-        </mat-card>
+<div class="container responsive-grid">
+    <div *ngFor="let card of filteredCards">
+        <app-card [data]="card"/>
     </div>
 </div>
