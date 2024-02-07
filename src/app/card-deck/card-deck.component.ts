@@ -1,8 +1,7 @@
-import { NgForOf } from "@angular/common";
-import { Component, Input } from "@angular/core";
-import { MatGridListModule } from "@angular/material/grid-list";
-import { CardComponent, CardData } from "../card/card.component";
+import { Component, Input, OnInit } from "@angular/core";
+import { CardData } from "../card/card.component";
 import { SortByOption } from "../content/content.component";
+import { GSheetService } from '../../services/gsheet.service';
 
 
 const filterByContainText = (filterText: string) => (card: CardData) =>
@@ -56,25 +55,19 @@ const sortAlpha = (card1: CardData, card2: CardData) => {
 
 @Component({
     selector: "app-card-deck",
-    standalone: true,
-    imports: [
-        MatGridListModule,
-        NgForOf,
-        CardComponent
-    ],
     templateUrl: "./card-deck.component.html",
     styleUrl: "./card-deck.component.scss"
 })
-
-export class CardDeckComponent {
+export class CardDeckComponent implements OnInit {
     @Input() filterText!: string;
     @Input() sortOption!: SortByOption;
+
     cards: CardData[];
 
-    constructor() {
+    constructor(private gsheetService: GSheetService) {
         this.cards = [
             {
-                id: "1984_penny",
+                id: "1984_penny", // make uuid
                 title: "1984 Penny",
                 imageUrl: "../../assets/1984_penny.jpeg",
                 altText: "A 1984 Penny",
@@ -113,6 +106,19 @@ export class CardDeckComponent {
                 acquired: new Date(2023, 11, 26),
                 created: new Date(1965),
             }];
+    }
+
+    ngOnInit() {
+        this.gsheetService.getMyData().subscribe(
+            data => {
+                console.log('Data received:', data);
+                // Handle the data here
+            },
+            error => {
+                console.error('Error:', error);
+                // Handle the error here
+            }
+        );
     }
 
     get filteredCards(): CardData[] {
